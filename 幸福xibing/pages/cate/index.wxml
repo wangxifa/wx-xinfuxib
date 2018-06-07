@@ -1,0 +1,37 @@
+<view class="main">
+    <view class="category-left">
+        <view wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory" class="cate-list {{curIndex===index?'on':''}}">
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <scroll-view class="category-right" scroll-y
+     scroll-into-view="{{toView}}"
+     scroll-with-animation>
+        <block wx:for="{{detail}}" wx:key="{{item.id}}">
+            <view class="cate-box" id="{{item.id}}">
+                <view class="cate-banner">
+                    <image src="{{item.banner}}" />
+                </view>
+                <view class="cate-title">
+                    <text>{{item.cate}}</text>
+                </view>
+                <view class="product">
+                    <view wx:for="{{item.detail}}" wx:key="{{index}}" wx:for-item="product" class="product-list">
+                        <navigator url="../good/index">
+                        <image src="{{product.thumb}}" />
+                        <view class="product_name"><text>{{product.name}}</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+
+        </block>
+    </scroll-view>
+</view>
+ <view class="page__ft">
+        <view class="page__bd page__bd_spacing">
+            <view class="weui-footer ">
+                <view class="weui-footer__text">幸福西饼</view>
+            </view>
+        </view>
+        </view>

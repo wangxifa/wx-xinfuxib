@@ -1,0 +1,66 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cate/index",
+    "pages/mycart/index",
+    "pages/my/index",
+    "pages/coupon/index",
+    "pages/order/index",
+    "pages/fcode/index",
+    "pages/more/index",
+    "pages/good/index",
+    "pages/search/index"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "i幸福西饼",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f9f9f9",
+    "onReachBottomDistance": 200
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#ff4444",
+    "backgroundColor": "#FCFCFC",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "pageTitle": "小程序主页",
+        "text": "首页",
+        "type": "home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-1.png"
+      },
+      {
+        "pagePath": "pages/mycart/index",
+        "pageTitle": "购物车",
+        "text": "购物车",
+        "type": "cart",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart-1.png"
+      },
+      {
+        "pagePath": "pages/cate/index",
+        "pageTitle": "新鲜现做 就在幸福西饼",
+        "text": "特惠专区",
+        "iconPath": "images/sale.png",
+        "selectedIconPath": "images/sale-1.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "pageTitle": "我的",
+        "text": "我的",
+        "type": "usercenter",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-1.png"
+      }
+    ]
+  },
+  "networkTimeout": {},
+  "debug": false
+}

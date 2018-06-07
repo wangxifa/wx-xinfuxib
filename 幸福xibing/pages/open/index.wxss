@@ -1,0 +1,9 @@
+/* pages/open/index.wxss */
+.container {
+    height: 1206rpx;
+    width: 100%;
+}
+image{
+    height: 100%;
+    width: 100%;
+}

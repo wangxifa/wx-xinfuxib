@@ -1,0 +1,46 @@
+/* pages/my/index.wxss */
+.userinfo {
+  height: 300rpx;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
+    background-color: #ffff;
+    align-items: center;
+  }
+  
+  .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+  
+  .userinfo-nickname {
+    color: #000;
+    font-size: 30rpx;
+  }
+  /* pages/center/index.wxss */
+page{
+  background: #eee;
+}
+.logo {
+  display: block;
+  margin: 40px auto;
+  width: 92px;
+  height: 82px;
+}
+.smallsize{
+  font-size: 12px;
+  color: #8a8a8a;
+}
+.icon-wrap {
+  width: 25%;
+  height: 80%;
+  float: left;
+  text-align: center;
+}
+
+
+
+/* .server{ position: absolute; top: 30rpx; right: 40rpx; } */

@@ -1,0 +1,88 @@
+<import src="/dist/loadmore/index.wxml" />
+<import src="./template-order.wxml"/>
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部<view class="red-dot" wx:if="{{allOrder.length != 0}}"></view></view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款<view class="red-dot" wx:if="{{noPayment.length != 0}}"></view></view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待发货<view class="red-dot" wx:if="{{shipments.length != 0}}"></view></view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待收货<view class="red-dot" wx:if="{{Receiving.length != 0}}"></view></view>
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">已完成<view class="red-dot" wx:if="{{finish.length != 0}}"></view></view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 41}}px;background:#F9F9F9; overflow:hidden;" bindchange="bindChange" circular="true">
+    <!-- 全部 -->
+    <swiper-item style="overflow:scroll;">
+    <view class="container" wx:if="{{allOrder.length != 0}}">
+        <view class="zan-panel" wx:for="{{allOrder}}" >
+           <include src="../order/template-order.wxml"/>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">暂无订单</view>
+        </view>
+    </view>
+    </swiper-item>
+
+
+    <!-- 待付款 -->
+    <swiper-item  style="overflow:scroll;">
+    <view class="container" wx:if="{{noPayment.length != 0}}">
+        <view class="zan-panel" wx:for="{{noPayment}}" >
+            <include src="../order/template-order.wxml"/>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">暂无订单</view>
+        </view>
+    </view>
+    </swiper-item>
+
+    <!--待发货-->
+    <swiper-item  style="overflow:scroll;">
+        <view class="container" wx:if="{{shipments.length != 0}}">
+        <view class="zan-panel" wx:for="{{shipments}}" >
+            <include src="../order/template-order.wxml"/>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">暂无订单</view>
+        </view>
+    </view>
+    </swiper-item>
+
+      <!--待收货-->
+    <swiper-item  style="overflow:scroll;">
+        <view class="container" wx:if="{{Receiving.length != 0}}">
+        <view class="zan-panel" wx:for="{{Receiving}}" >
+            <include src="../order/template-order.wxml"/>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">暂无订单</view>
+        </view>
+    </view>
+    </swiper-item>
+
+    <!--已完成-->
+    <swiper-item  style="overflow:scroll;">
+    <view class="container" wx:if="{{finish.length != 0}}">
+        <view class="zan-panel" wx:for="{{finish}}" >
+            <include src="../order/template-order.wxml"/>
+        </view>
+    </view>
+    <view wx:else>
+            <view class="no-order">
+                <image src="/images/no-order.png" class="no-order-img"></image>
+                <view class="text">暂无订单</view>
+            </view>
+    </view>
+    </swiper-item>
+
+</swiper>

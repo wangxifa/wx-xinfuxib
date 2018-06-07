@@ -1,0 +1,44 @@
+@import "dist/index.wxss";
+@import 'style/weui.wxss';
+.container {
+  background: #F9F9F9;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.container::before {
+}
+
+.smallsize{
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-bottom: 2rpx;
+  border-radius: 50%;
+  border: 2px solid #D1EEEE;
+}
+
+.g-bda-userinfo {
+  padding-top: 38rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-nickname{
+  color: #292929;
+  font-size: 15px;
+}
+
+.page__ft{
+  position: absolute; margin-top:30rpx; width: 100%; text-align: center;
+}
+.weui-footer .weui-footer__text{
+font-size: 50rpx;
+color: red;
+margin-bottom: 30rpx;
+}

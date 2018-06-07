@@ -1,0 +1,89 @@
+<view class="container">
+  <view class="index-search stat-search">
+    <navigator url="../search/index">
+      <view>
+        <icon size="16" type="search"></icon>
+        <text>搜索商品</text>
+      </view>
+    </navigator>
+  </view>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{movies}}" wx:for-index="index" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="desc">
+    <view class="zan-cell__bd">
+      <image src="../../images/5.png" />
+      品牌保障
+    </view>
+    <view class="zan-cell__bd">
+      <image src="../../images/3.png" />
+      担保交易
+    </view>
+    <view class="zan-cell__bd">
+      <image src="../../images/4.png" />
+      价格优惠
+    </view>
+    <view class="zan-cell__bd">
+      <image src="../../images/1.png" />
+      门店体验
+    </view>
+  </view>
+ <view class="inform">
+    <!-- <span class="rolling">尊敬的用户,由于17-18道路较为拥堵,为了您能即使的收到蛋糕，建议您预约配送时间尽量避开此时间段,谢谢</span> -->
+    <view class="time">
+      <span class="inform-time-start">每日订单配送时段:9：00~21：00</span>
+      <view class="inform-time-end">18:00 后停止接当天配送订单</view>
+    </view>
+  </view>
+  <view class="warm">
+    温馨提示：关于尺磅数说明(对角线尺寸),1磅约七寸、2磅约9寸、3磅约10寸、4磅约12寸。(仅供参考)
+  </view>
+   
+    <view class="cart-images_first">
+      <image src="../../images/swiper-5.jpg" alt="" />
+    </view>
+ 
+
+  <view class="cart-images_second">
+    <image src="../../images/cart-1.jpg" alt="" />
+    <image src="../../images/cart-2.jpg" alt="" />
+  </view>
+
+  <view class="cart-images-third">
+    <image src="../../images/swiper-6.jpg" alt="" />
+    <image src="../../images/swiper-7.jpg" alt="" />
+    <image src="../../images/swiper-8.jpg" alt="" />
+  </view>
+  <view class="htitle">
+    <view class="more">最新好货  zuixinhaohuo</view>
+  </view>
+  <view wx:for="{{goods}}" wx:key="good" wx:for-index="idx" class="{{item.class_value}}">
+    <navigator url="/pages/good/index?id={{item.id}}">
+      <image class="goods-img" src="{{item.image}}" mode="aspectFill" />
+      <view class="good-name">{{item.title}}</view>
+      <view class="good-price">￥{{item.price}}</view>
+    </navigator>
+  </view>
+  <view class="htitle">
+    <view class="more">新货上市  xinhuoshnags</view>
+  </view>
+  <view wx:for="{{goods}}" wx:key="good" wx:for-index="idx" class="{{item.class_value}}">
+    <navigator url="/pages/good/index?id={{item.id}}">
+      <image class="goods-img" src="{{item.image}}" mode="aspectFill" />
+      <view class="good-name">{{item.title}}</view>
+      <view class="good-price">￥{{item.price}}</view>
+    </navigator>
+  </view>
+</view>
+<view class="page__ft">
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-footer ">
+      <view class="back" bindtap="backIndex">返回首页</view>
+      <view class="weui-footer__text">幸福西饼</view>
+    </view>
+  </view>
+</view>

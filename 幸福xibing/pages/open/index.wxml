@@ -1,0 +1,4 @@
+<!--pages/open/index.wxml-->
+<view class="container" bindtap="index">
+    <image src="http://www.oamul.com/wp-content/uploads/2017/07/1%E6%9C%88.gif" />
+</view>

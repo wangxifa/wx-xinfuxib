@@ -1,0 +1,19 @@
+/* pages/shop/index.wxss */
+.search{ display: flex; padding: 10rpx 20rpx; background-color: #eee;}
+.search-value{ background: #FFF; border-radius: 3px; flex:1; padding: 5rpx 10rpx; font-size: 24rpx; position: relative}
+.search .clear{ position: absolute; top: 0; right: 5rpx; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 999}
+.search .clear image{ width: 25px; height: 25px; opacity: .3}
+.search-button{ width: 30px; display: flex; align-items: center; justify-content: flex-end}
+.search-button image{ width: 20px; height: 20px;}
+
+.item-row{ display: flex; padding: 30rpx; border-bottom: 1px solid #ddd }
+.cover{ width: 200rpx; height: 200rpx; background: #ddd; margin-right: 30rpx; border:1px solid #ddd;}
+.decs{ flex: 1; position: relative}
+.title{ font-size: 32rpx; display: block; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;  -webkit-line-clamp: 2; overflow:hidden; font-weight: bold; color: #333;}
+.price{ position: absolute; bottom: 15rpx; left: 0}
+.price .new{ font-size: 32rpx; color: #F00; margin-right: 20rpx;}
+.price .old{ font-size: 24rpx; color: #999; text-decoration: line-through;}
+.price text::before{ content: "¥"}
+.btn{ position: absolute; right: 0; bottom: 15rpx; background: #F00; font-size: 28rpx; color: #FFF; text-align: center; padding: 5rpx 20rpx; border-radius: 5px;}
+
+.nogoods{ color: #999; font-size: 24rpx; text-align: center; margin-top: 40rpx;}
